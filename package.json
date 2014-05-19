@@ -1,0 +1,29 @@
+{
+  "name": "rtc-guidebook",
+  "version": "0.0.0",
+  "description": "A guidebook on building WebRTC applications using rtc.io",
+  "main": "index.js",
+  "dependencies": {
+    "manuscript-builder": "^0.0.3",
+    "rtc-media": "^1.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rtc-io/rtc-guidebook.git"
+  },
+  "keywords": [
+    "rtc.io",
+    "webrtc",
+    "guide"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@nicta.com.au>",
+  "license": "CC BY 3.0",
+  "bugs": {
+    "url": "https://github.com/rtc-io/rtc-guidebook/issues"
+  },
+  "homepage": "https://github.com/rtc-io/rtc-guidebook"
+}
