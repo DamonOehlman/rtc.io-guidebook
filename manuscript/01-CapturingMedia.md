@@ -1,3 +1,3 @@
 # Capturing Media with WebRTC
 
-<<(examples/rtc-media/simple-capture.js)
+<<(code/rtc-media/simple-capture.js)
