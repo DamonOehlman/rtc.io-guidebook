@@ -3,3 +3,6 @@ Preface.md
 mainmatter:
 00-Intro.md
 01-CapturingMedia.md
+02-Connecting.md
+03-RemoteStreams.md
+04-DataChannels.md
