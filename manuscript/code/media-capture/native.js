@@ -1,3 +1,8 @@
+// use whichever prefixed version we have available
+navigator.getUserMedia = navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
+
 function handleSuccess(stream) {
   console.log('our capture request succeeded, stream captured: ', stream);
 }

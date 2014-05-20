@@ -2,7 +2,7 @@
 
 When working with WebRTC, usually the first task you will want to attempt is capturing media from your local webcam and microphone.  This task is completed by interacting with the [Media Capture and Streams API](http://www.w3.org/TR/mediacapture-streams/) in a browser that supports it.  In most cases, people refer to this as simply `getUserMedia` (or sometimes even gUM for short).
 
-Not taking vendor prefixes into account (i.e. `webkit`, `moz`, etc) code to capture a local stream with video and audio from your local machine is completed with the following code:
+Capturing a local stream with video and audio from your local machine is completed with the following code (note the requirement to look for vendor prefixed versions of the `getUserMedia` function):
 
 <<(code/media-capture/native.js)
 
