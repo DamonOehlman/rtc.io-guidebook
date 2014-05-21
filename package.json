@@ -4,14 +4,14 @@
   "description": "A guidebook on building WebRTC applications using rtc.io",
   "main": "index.js",
   "dependencies": {
-    "guidebook": "*",
+    "guidebook": "~0.1",
     "rtc-switchboard": "~0.10"
   },
   "devDependencies": {
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=guidebook node server"
+    "start": "rm -rf cdn.db && DEBUG=guidebook node server"
   },
   "repository": {
     "type": "git",
