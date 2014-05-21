@@ -24,13 +24,19 @@ Displayed below is some code that demonstrates a simple process of generating an
 
 <<(code/connecting/createoffer.js)
 
-The code below demonstrates what is required to make this happen:
+All being well our demo console should have provided some output about what the `createOffer` process. Now, let's look at an example that shows how two peer connections complete the signaling dance:
 
 <<(code/connecting/p2p-singlebrowser.js)
 
+If you see the message "signaling completed between peers" then the signaling phase has been completed, between the two peers. At this point, however, they won't be able to communicate with each other though as we have not negotiated any ice candidates.  While it's not a fully working example in it's own right, the code below demonstrates what is involved with sharing an ice candidate "gathered" by one peer with another:
+
+<<(code/connecting/share-ice-candidates.js)
+
+Using both of these techniques to achieve a "stable" `signalingState`, and a "connected" (or "complete") `iceConnectionState` we will be able to talk over a local peer connection.
+
 ## Enter `rtc-quickconnect`
 
-The `rtc-quickconnect` module exists to help get peer connections established quickly between peers in a common room.  As simple example of using quickconnect (without media or data exchange) is shown below:
+As you can see, there is quite a bit involved with getting a two peers communicating with each other, so let's see what we can do to make our lives easier using some of the rtc.io modules.  In the following example, we will use [`rtc-quickconnect`](https://github.com/rtc-io/rtc-quickconnect) to create a connection between two local peers.  Our signaling will go via the signaling server that sitting behind this guidebook (hence the use of `location.origin`), but in reality it could just as easily go locally.
 
 <<(code/connecting/quickconnect-intro.js)
 

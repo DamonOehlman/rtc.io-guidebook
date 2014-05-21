@@ -11,10 +11,50 @@ function handleFailure(step) {
   }
 }
 
+function sendAnswerToA(desc) {
+  return function() {
+    peerA.setRemoteDescription(
+      desc,
+      function() {
+        console.log('signaling completed between peers')
+      },
+      handleFailure('setting remote description of peer A')
+    );
+  };
+}
+
+function sendOfferToB(desc) {
+  function createAnswer() {
+    peerB.createAnswer(
+      function(desc) {
+        console.log('peer B successfully created answer');
+        peerB.setLocalDescription(
+          desc,
+          sendAnswerToA(desc),
+          handleFailure('setting local description of peer B')
+        );
+      },
+      handleFailure('creating answer')
+    );
+  }
+
+  return function() {
+    peerB.setRemoteDescription(
+      desc,
+      createAnswer,
+      handleFailure('setting remote description of peer B')
+    );
+  }
+}
+
 peerA.createOffer(
   function(desc) {
-    console.log('successfully created offer, we now have some sdp');
-    console.log(desc.sdp);
+    console.log('peer A successfully created offer');
+    peerA.setLocalDescription(
+      desc,
+      sendOfferToB(desc),
+      handleFailure('setting local description of peer A')
+    );
   },
 
   handleFailure('creating offer')
