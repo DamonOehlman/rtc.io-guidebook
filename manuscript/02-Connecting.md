@@ -21,3 +21,19 @@ In most instances, the two peers will use websocket connections via the server t
 For the moment, let's take signaling (over a network) out of the equation and get two peer connections talking to each other in a single browser window.  The code below demonstrates what is required to make this happen:
 
 <<(code/connecting/p2p-singlebrowser.js)
+
+## Enter `rtc-quickconnect`
+
+The `rtc-quickconnect` module exists to help get peer connections established quickly between peers in a common room.  As simple example of using quickconnect (without media or data exchange) is shown below:
+
+<<(code/connecting/quickconnect-intro.js)
+
+In this example we are focusing on capturing two different types of event:
+
+- `peer:announce`
+
+  The `peer:announce` event is triggered when a peer has joined the centralized signaling server. No peer connections have been created with the peer at this point.
+
+- `call:started`
+
+  This event is trigged once we have a valid `RTCPeerConnection` established with a remote peer. The event is only triggered once we have full network connectivity via the peer connection also.

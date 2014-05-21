@@ -1,7 +1,7 @@
 var guidebook = require('guidebook');
 var port = parseInt(process.env.NODE_PORT, 10) || 3000;
 
-guidebook({}, function(err, server) {
+guidebook({}, function(err, server, cdn) {
   var switchboard;
 
   if (err) {
@@ -9,7 +9,10 @@ guidebook({}, function(err, server) {
   }
 
   // add the switchboard to our server
-  switchboard = require('rtc-switchboard')(server, { serveLib: true });
+  switchboard = require('rtc-switchboard')(server);
+
+  // serve the primus client
+  cdn.app.get('/rtc.io/primus.js', switchboard.library());
 
   // start the server
   server.listen(port, function(err) {

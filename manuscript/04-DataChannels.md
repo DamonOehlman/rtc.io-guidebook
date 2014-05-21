@@ -1,3 +1,2 @@
-# Using Data Channels for P2P Data Transfer
+# Using WebRTC Data Channels
 
-To be completed.
