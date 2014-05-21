@@ -32,9 +32,9 @@ The code below demonstrates what is required to make this happen:
 
 The `rtc-quickconnect` module exists to help get peer connections established quickly between peers in a common room.  As simple example of using quickconnect (without media or data exchange) is shown below:
 
-A> __NOTE:__ To actually see this demo work, you will either need to open the guidebook in two separate browser tabs, or complete it with friends in the context of a workshop.
-
 <<(code/connecting/quickconnect-intro.js)
+
+A> __NOTE:__ To actually see this demo work, you will either need to open the guidebook in two separate browser tabs, or complete it with friends in the context of a workshop.
 
 In this example we are focusing on capturing two different types of event:
 
