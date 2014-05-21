@@ -18,13 +18,21 @@ In most instances, the two peers will use websocket connections via the server t
 
 ## Locally connecting Peer Connections
 
-For the moment, let's take signaling (over a network) out of the equation and get two peer connections talking to each other in a single browser window.  The code below demonstrates what is required to make this happen:
+For the moment, let's take signaling (over a network) out of the equation and get two peer connections talking to each other in a single browser window.  Let's start by having a look at what is involved with making one side of this equation work.
+
+Displayed below is some code that demonstrates a simple process of generating an offer:
+
+<<(code/connecting/createoffer.js)
+
+The code below demonstrates what is required to make this happen:
 
 <<(code/connecting/p2p-singlebrowser.js)
 
 ## Enter `rtc-quickconnect`
 
 The `rtc-quickconnect` module exists to help get peer connections established quickly between peers in a common room.  As simple example of using quickconnect (without media or data exchange) is shown below:
+
+> __NOTE:__ To actually see this demo work, you will either need to open the guidebook in two separate browser tabs, or complete it with friends in the context of a workshop.
 
 <<(code/connecting/quickconnect-intro.js)
 
