@@ -6,7 +6,7 @@ Capturing a local stream with video and audio from your local machine is complet
 
 <<(code/media-capture/native.js)
 
-A> __NOTE:__ While running the example, you should have been prompted by the browser requesting permission to access your webcam and microphone.  This is an important security step that has been implemented into all WebRTC implementations to ensure that your camera and microphone is only used by applications with your consent.
+I> While running the example, you should have been prompted by the browser requesting permission to access your webcam and microphone.  This is an important security step that has been implemented into all WebRTC implementations to ensure that your camera and microphone is only used by applications with your consent.
 
 If we pull apart the above example, we can see that the we are dealing with a quite a simple API (at least in terms of stream capture).  The most complicated part of the API is the concept of "capture constraints". These constraints (or flags) can range from very simple (as we see above) to pretty darn complicated.  We'll talk more about constraints later in the guide, but for the moment I think we can be pretty pleased with capturing that stream.
 

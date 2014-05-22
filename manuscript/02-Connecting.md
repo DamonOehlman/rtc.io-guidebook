@@ -40,7 +40,7 @@ As you can see, there is quite a bit involved with getting a two peers communica
 
 <<(code/connecting/quickconnect-intro.js)
 
-A> __NOTE:__ To actually see this demo work, you will either need to open the guidebook in two separate browser tabs, or complete it with friends in the context of a workshop.
+T> To actually see this demo work, you will either need to open the guidebook in two separate browser tabs, or complete it with friends in the context of a workshop.
 
 In this example we are focusing on capturing two different types of event:
 
