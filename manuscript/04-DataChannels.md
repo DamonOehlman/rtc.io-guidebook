@@ -10,4 +10,4 @@ The example above is fairly contrived, but hopefully does demonstrate how `rtc-q
 
 On their own data channels are a lot of fun to play with, but combined with node streams and you get something pretty amazing.  For instance, let's take a look at the following example:
 
-<<(code/datachannels/dcstream-local.js)
+<<(code/datachannels/dcstream-imagetransfer.js)
