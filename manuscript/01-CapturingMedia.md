@@ -24,4 +24,10 @@ Throughout the course of this guide we will be using this approach of using modu
 
 ## Using `rtc-media` for Capture and Rendering
 
+The `rtc-media` module has been designed to make capturing and rendering media streams as simple as possible, and the example below demonstrates how both can be achieved with only a few lines of code:
+
 <<(code/media-capture/rtc-media-simple.js)
+
+In the example above we can see how a call to `media()` is used to invoke the `getUserMedia` call.  Aditionally, when calling this function we are returned an object that use in a few different ways.  The example demonstrates both how we can use the `capture` event to handle successful capture of a media stream, the `error` event to handle capture failurs (including when the user denies access to a local resource), and also the `render` function which is a convenient all-in-one helper for rendering media into the DOM.
+
+While in this example, we have told the `render` function that we would like it to render to the `document.body`.  In this case, where the render target is not a valid media element (`<video>`, `<audio>`, etc) a new appropriate element is created and injected into the specified container.

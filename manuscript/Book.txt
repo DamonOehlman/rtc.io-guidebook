@@ -6,3 +6,5 @@ mainmatter:
 02-Connecting.md
 03-RemoteStreams.md
 04-DataChannels.md
+05-MediaConstraints.md
+06-MediaProcessing.md
