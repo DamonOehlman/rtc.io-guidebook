@@ -38,16 +38,10 @@ Using both of these techniques to achieve a "stable" `signalingState`, and a "co
 
 As you can see, there is quite a bit involved with getting a two peers communicating with each other, so let's see what we can do to make our lives easier using some of the rtc.io modules.  In the following example, we will use [`rtc-quickconnect`](https://github.com/rtc-io/rtc-quickconnect) to create a connection between two local peers.  Our signaling will go via the signaling server that sitting behind this guidebook (hence the use of `location.origin`), but in reality it could just as easily go locally.
 
-<<(code/connecting/quickconnect-intro.js)
+<<(code/connecting/quickconnect-local.js)
 
-T> To actually see this demo work, you will either need to open the guidebook in two separate browser tabs, or complete it with friends in the context of a workshop.
+In the above sample each of the peers created using quickconnect wait for a `call:started` event.  This event is triggered once _connectivity_ has been established between the peer connections.
 
-In this example we are focusing on capturing two different types of event:
+For more information on the various events that are triggered by a quickconnect instance, you should consult both the [rtc-quickconnect](https://github.com/rtc-io/rtc-quickconnect) and [rtc-signaller](https://github.com/rtc-io/rtc-signaller) documentation.  This is because the object created when you call the `quickconnect` function is just a smarter `rtc-signaller` instance.
 
-- `peer:announce`
-
-  The `peer:announce` event is triggered when a peer has joined the centralized signaling server. No peer connections have been created with the peer at this point.
-
-- `call:started`
-
-  This event is trigged once we have a valid `RTCPeerConnection` established with a remote peer. The event is only triggered once we have full network connectivity via the peer connection also.
+W> In the event that you are trying to run these examples within Firefox, you should be aware that the example above will not work as Firefox __requires__ that a peer connection has either a video stream or a data channel configured before it is able to create an offer or an answer.
