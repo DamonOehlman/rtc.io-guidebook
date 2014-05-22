@@ -18,7 +18,7 @@ function handleStreamCap(stream) {
     })
     // when a peer leaves, remove teh media
     .on('call:ended', function(id) {
-      // remove video elements associated with the peer that has terminated the call
+      // remove video elements associated with the remote peer
       qsa('video[data-peer="' + id + '"]').forEach(function(el) {
         el.parentNode.removeChild(el);
       });
