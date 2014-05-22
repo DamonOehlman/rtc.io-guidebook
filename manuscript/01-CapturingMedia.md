@@ -24,4 +24,4 @@ Throughout the course of this guide we will be using this approach of using modu
 
 ## Using `rtc-media` for Capture and Rendering
 
-<<(code/rtc-media/simple-capture.js)
+<<(code/media-capture/rtc-media-simple.js)
