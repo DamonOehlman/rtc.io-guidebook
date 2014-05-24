@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rm -rf cdn.db && DEBUG=guidebook node server"
+    "start": "DEBUG=guidebook node server"
   },
   "repository": {
     "type": "git",

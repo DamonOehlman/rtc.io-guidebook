@@ -1,10 +1,10 @@
 frontmatter:
 Preface.md
 mainmatter:
-00-Intro.md
-01-CapturingMedia.md
-02-Connecting.md
-03-RemoteStreams.md
-04-DataChannels.md
-05-MediaConstraints.md
-06-MediaProcessing.md
+Intro.md
+CapturingMedia.md
+Connecting.md
+RemoteStreams.md
+DataChannels.md
+MediaConstraints.md
+MediaProcessing.md

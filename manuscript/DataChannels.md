@@ -14,4 +14,8 @@ For instance, let's take a look at the following example:
 
 <<(code/datachannels/dcstream-imagetransfer.js)
 
-This example combines a stream
+Over the evolution of the rtc.io, a pattern started to emerge where you could create a function that prepared a quickconnect instance in a particular way.  There are number of examples of these plugins in the [rtc-io github repositories](https://github.com/rtc-io/).
+
+Let's take a look at a plugin the shares state across WebRTC data channels using [scuttlebutt](https://github.com/dominictarr/scuttlebutt) through it's streaming interface.  This module is called [`rtc-mesh`](https://github.com/rtc-io/rtc-mesh) and a simple example of it's use is shown below:
+
+<<(code/datachannels/mesh.js)
