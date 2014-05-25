@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "A guidebook on building WebRTC applications using rtc.io",
   "main": "index.js",
+  "bin": {
+    "rtc-guidebook": "./server.js"
+  },
   "dependencies": {
     "guidebook": "~0.1",
     "rtc-switchboard": "~0.10"

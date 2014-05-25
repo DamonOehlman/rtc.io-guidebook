@@ -1,7 +1,8 @@
+#!/usr/bin/env node
 var guidebook = require('guidebook');
 var port = parseInt(process.env.NODE_PORT, 10) || 3000;
 
-guidebook({}, function(err, server, cdn) {
+guidebook({ basePath: __dirname }, function(err, server, cdn) {
   var switchboard;
 
   if (err) {
