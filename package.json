@@ -1,6 +1,6 @@
 {
   "name": "rtc-guidebook",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A guidebook on building WebRTC applications using rtc.io",
   "main": "index.js",
   "bin": {
@@ -10,8 +10,7 @@
     "guidebook": "~0.1",
     "rtc-switchboard": "~0.10"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "DEBUG=guidebook node server"
