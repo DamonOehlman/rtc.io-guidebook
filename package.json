@@ -7,6 +7,7 @@
     "rtc-guidebook": "./server.js"
   },
   "dependencies": {
+    "failfast": "~0.1",
     "guidebook": "~0.1",
     "rtc-switchboard": "~0.10"
   },
