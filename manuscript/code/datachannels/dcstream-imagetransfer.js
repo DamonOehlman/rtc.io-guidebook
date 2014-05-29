@@ -22,7 +22,7 @@ function prepStream(dc, id) {
   }));
 }
 
-quickconnect(location.origin, { room: 'filetx-test' })
+quickconnect('http://rtc.io/switchboard/', { room: 'filetx-test' })
   .createDataChannel('files')
   .on('channel:opened:files', function(id, dc) {
     channels.push(dc);
