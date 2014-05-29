@@ -2,9 +2,6 @@
 var guidebook = require('guidebook');
 var port = parseInt(process.env.NODE_PORT, 10) || 3000;
 
-// fail fast (quit process but log error)
-require('failfast')(__dirname);
-
 guidebook({ basePath: __dirname }, function(err, server, cdn) {
   var switchboard;
 
