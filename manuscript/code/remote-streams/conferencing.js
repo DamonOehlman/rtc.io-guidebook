@@ -3,7 +3,7 @@ var media = require('rtc-media');
 var qsa = require('fdom/qsa');
 
 function handleStreamCap(stream) {
-  quickconnect('http://rtc.io/switchboard/', { room: 'conftest' })
+  quickconnect('//switchboard.rtc.io/', { room: 'conftest' })
     // broadcast our captured media to other participants in the room
     .addStream(stream)
     // when a peer is connected (and active) pass it to us for use

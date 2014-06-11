@@ -4,8 +4,8 @@ var uuid = require('uuid');
 var roomId = uuid.v4();
 
 // create some peers
-var peerA = quickconnect('http://rtc.io/switchboard/', { room: roomId });
-var peerB = quickconnect('http://rtc.io/switchboard/', { room: roomId });
+var peerA = quickconnect('//switchboard.rtc.io/', { room: roomId });
+var peerB = quickconnect('//switchboard.rtc.io/', { room: roomId });
 
 // create a shared mesh between and b
 var modelA = mesh(peerA);
