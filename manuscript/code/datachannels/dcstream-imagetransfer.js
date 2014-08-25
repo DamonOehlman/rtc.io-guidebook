@@ -40,7 +40,7 @@ quickconnect('//switchboard.rtc.io/', { room: 'filetx-test' })
 
 dropkick(document.body).on('file', function(file) {
   channels.map(createDataStream).forEach(function(stream) {
-    fileReader(file).pipe(stream);
+    fileReader(file, { meta: true }).pipe(stream);
   });
 });
 
