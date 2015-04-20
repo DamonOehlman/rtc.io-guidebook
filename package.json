@@ -9,7 +9,7 @@
   "dependencies": {
     "failfast": "~0.1",
     "guidebook": "~0.2.2",
-    "rtc-switchboard": "~0.10"
+    "rtc-switchboard": "^2.2.1"
   },
   "devDependencies": {},
   "scripts": {
